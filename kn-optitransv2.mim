@@ -1,0 +1,401 @@
+;; kn-optitransv2.mim -- Kannada input method.
+;; Copyright (C) 2015  Vishvas Vasuki  <vishvas.vasuki@gmail.com>
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+(input-method kn optitransv2)
+
+(description "Kannada input method by the OPTITRANS
+transliteration system. 
+
+0. A major deviation from other transliteration systems like ITRANS and HK
+is that latin consonants are mapped to the correpsonding devanAgarI consonant *followed by the 
+vowel a*. For example, k maps to ಕ, not ಕ್.
+
+1. panchama-varNa-s of vyanjana-varga-s 
+  nnk->ಙ್ಕ, nnkh->ಙ್ಖ, nng->ಙ್ಗ, nngh->ಙ್ಘ
+  nnch->ಞ್ಚ, nnCh->ಞ್ಛ, nnc->ಞ್ಚ, nnC->ಞ್ಛ,
+
+2. Any common consonant, typed twice, yields that consonant with the virAma. So, nn yields ನ್. The rationale is that a repeated consonant such as ನನ and ದದ is far less common than the consonants with a virAma, such as ನ್ and ದ್.
+
+3. The rare character sequences that conflict with shortcuts for more frequently occuring strings can be typed using the "commit key" - (Ctrl + Shift  + Enter), or with the use of the arrow key. 
+For example, sh yields ಶ. But if one wanted to type ಸಹ, one can type: s<Commit key>h or s<left arrow, right arrow>h.
+
+Examples:
+- Avoiding unnecessary 'a'-s.
+  - kml or kamala - ಕಮಲ 
+- Typing vyanjana-s with a virAma
+  - sikkt - ಸಿಕ್ತ
+  - sik;t - ಸಿಕ್ತ
+- Shortcut for typing panchama-s/ anunAsika-s of vargIya-vyanjana-s
+  - shankara or shnnkr- ಶಙ್ಕರ।
+  - snncit - ಸಞ್ಚಿತ
+  - shann karoti - ಶಙ್ ಕರೋತಿ।
+- Overriding shortcuts
+  - pashyann  karoti - ಪಶ್ಯನ್ ಕರೋತಿ। (Note two spaces here. Avoids ಪಶ್ಯಙ್ ಕರೋತಿ )
+  - s<Commit key>h or s<left arrow, right arrow>h or sah or saha - ಸಹ (Avoids ಶ)
+
+
+The motivation behind additions made to the basic ITRANS scheme
+is described in https://sites.google.com/site/sanskritcode/optitrans,
+along with a tabulated comparison with several other
+transliteration schemes.
+
+Note: You can use many symbols defined in lsymbol.mim.
+
+Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
+
+(title "ಕ")
+
+(map
+ (non_init_keys
+  (".") (";") ("~") ("$")
+  ("A") ("B") ("C") ("D") ("E") ("F") ("G") ("H") ("I") ("J") ("K") ("L")
+  ("M") ("N") ("O") ("P") ("Q") ("R") ("S") ("T") ("U") ("V") ("W") ("X") ("Y") ("Z") 
+  ("a") ("b") ("c") ("d") ("e") ("f") ("g") ("h") ("i")
+  ("j") ("k") ("l") ("m") ("n") ("o") ("p") ("q") ("r")
+  ("s") ("t") ("u") ("v") ("w") ("x") ("y") ("z")
+  )
+
+ (consonant
+  ("k" "ಕ")
+  ("kh" "ಖ")
+  ("K" "ಖ")
+  ("g" "ಗ")
+  ("gh" "ಘ")
+  ("G" "ಘ")
+  (".k" "ಕ಼")
+  (".kh" "ಖ಼")
+  (".K" "ಖ಼")
+  (".g" "ಗ಼")
+  ("~N" "ಙ")
+  ("N^" "ಙ")
+  ("ch" "ಚ")
+  ("Ch" "ಛ")
+  ("c" "ಚ")
+  ("C" "ಛ")
+  ("chh" "ಛ")
+  ("j" "ಜ")
+  ("jh" "ಝ")
+  ("J" "ಝ")
+  ("~n" "ಞ")
+  ("JN" "ಞ")
+  ("T" "ಟ")
+  ("Th" "ಠ")
+  ("D" "ಡ")
+  ("Dh" "ಢ")
+  (".D" "ಡ಼")
+  (".Dh" "ಢ಼")
+  ("N" "ಣ")
+  ("t" "ತ")
+  ("th" "ಥ")
+  ("d" "ದ")
+  ("dh" "ಧ")
+  ("n" "ನ")
+  ("p" "ಪ")
+  ("ph" "ಫ")
+  ("P" "ಫ")
+  (".ph" "ಫ಼")
+  ("f" "ಫ಼")
+  ("b" "ಬ")
+  ("bh" "ಭ")
+  ("B" "ಭ")
+  ("m" "ಮ")
+  ("y" "ಯ")
+  ("r" "ರ")
+  ("l" "ಲ")
+  ("L" "ಳ")
+  ("v" "ವ")
+  ("w" "ವ")
+  ("sh" "ಶ")
+  ("Z" "ज़")
+  (".j" "ಜ಼")
+  ("z" "ಶ")
+  ("S" "ಷ")
+  ("Sh" "ಷ")
+  ("shh" "ಷ")
+  ("s" "ಸ")
+  ("h" "ಹ")
+  ("ttr" "ತ್ರ")
+  ("jjn" "ಜ್ಞ")
+  ("j~n" "ಜ್ಞ")
+  ("x" "ಕ್ಷ")
+
+  ; nn shortcuts
+  ("nnk" "ಙ್" (pushback 1))
+  ("nnx" "ಙ್" (pushback 1))
+  ("nnkh" "ಙ್" (pushback 1))
+  ("nnK" "ಙ್" (pushback 1))
+  ("nng" "ಙ್" (pushback 1))
+  ("nngh" "ಙ್" (pushback 1))
+  ("nnG" "ಙ್" (pushback 1))
+  ("nnch" "ಞ್" (pushback 1))
+  ("nnCh" "ಞ್" (pushback 1))
+  ("nnc" "ಞ್" (pushback 1))
+  ("nnC" "ಞ್" (pushback 1))
+  ("nnj" "ಞ್" (pushback 1))
+  ("nnjh" "ಞ್" (pushback 1))
+  ("nnJ" "ಞ್" (pushback 1))
+
+  ("nnT" "ಣ್" (pushback 1))
+  ("nnTh" "ಣ್" (pushback 1))
+  ("nnD" "ಣ್" (pushback 1))
+  ("nnDh" "ಣ್" (pushback 1))
+
+  ) ; consonant ends
+
+(consonant_with_space
+  ("nn " "ನ್ ")
+  ("nn  " "ನ್ ") ; handle the case where the transformation to ಙ್ etc.. is not desired, even when followed by a character like k.
+  ("nn k" "ಙ್ " (pushback 1))
+  ("nn x" "ಙ್ " (pushback 1))
+  ("nn K" "ಙ್ " (pushback 1))
+  ("nn g" "ಙ್ " (pushback 1))
+  ("nn G" "ಙ್ " (pushback 1))
+  ("nn c" "ಞ್ " (pushback 1))
+  ("nn C" "ಞ್ " (pushback 1))
+  ("nn j" "ಞ್ " (pushback 1))
+  ("nn J" "ಞ್ " (pushback 1))
+
+  ("nn T" "ಣ್ " (pushback 1))
+  ("nn D" "ಣ್ " (pushback 1))
+  ) ; consonant_with_space ends
+
+(consonant_with_viraama
+  ; virAma shortcuts
+  ("kk" "ಕ್")
+  ("khkh" "ಖ್")
+  ("KK" "ಖ್")
+  ("gg" "ಗ್")
+  ("ghgh" "ಘ್")
+  ("GG" "ಘ್")
+  ("~N~N" "ಙ್")
+  ("chch" "ಚ್")
+  ("ChCh" "ಛ್")
+  ("cc" "ಚ್")
+  ("CC" "ಛ್")
+  ("jj" "ಜ್")
+  ("jhjh" "ಝ್")
+  ("JJ" "ಝ್")
+  ("~n~n" "ಞ್")
+  ("JNJN" "ಞ್")
+  ("TT" "ಟ್")
+  ("ThTh" "ಠ್")
+  ("DD" "ಡ್")
+  ("DhDh" "ಢ್")
+  ("NN" "ಣ್")
+  ("tt" "ತ್")
+  ("thth" "ಥ್")
+  ("dd" "ದ್")
+  ("dhdh" "ಧ್")
+  ("nn" "ನ್")
+  ("pp" "ಪ್")
+  ("phph" "ಫ್")
+  ("PP" "ಫ್")
+  ("FF" "ಫ़್")
+  ("bb" "ಬ್")
+  ("bhbh" "ಭ್")
+  ("BB" "ಭ್")
+  ("mm" "ಮ್")
+  ("M" "ಂ")
+  ("MM" "ಮ್")
+  ("yy" "ಯ್")
+  ("rr" "ರ್")
+  ("ll" "ಲ್")
+  ("LL" "ಳ್")
+  ("vv" "ವ್")
+  ("shsh" "ಶ್")
+  ("zz" "ಶ್")
+  ("SS" "ಷ್")
+  ("ShSh" "ಷ್")
+  ("ss" "ಸ್")
+  ("hh" "ಹ್")
+  ("xx" "ಕ್ಷ್")
+  ) ; consonant_with_viraama ends
+
+ (independent
+  ("a" "ಅ")
+  ("aa" "ಆ")
+  ("A" "ಆ")
+  ("i" "ಇ")
+  ("ii" "ಈ")
+  ("I" "ಈ")
+  ("u" "ಉ")
+  ("uu" "ಊ")
+  ("U" "ಊ")
+  ("R" "ಋ")
+  ("RRi" "ಋ")
+  ("R^i" "ಋ")
+  ("LLi" "ಌ")
+  ("L^i" "ಌ")
+  ("e" "ಎ")
+  ("ee" "ಏ")
+  ("E" "ಏ")
+  ("ai" "ಐ")
+  ("o" "ಒ")
+  ("oo" "ಓ")
+  ("O" "ಓ")
+  ("au" "ಔ")
+  ("RRI" "ೠ")
+  ("RR" "ೠ")
+  ("R^I" "ೠ")
+  ("LLI" "ೡ")
+  ("L^I" "ೡ")
+  ("AUM" "ಓಂ")
+  ("OM" "ಓಂ")
+  
+  (".a" "ಽ")
+  ((S-\ ) "‌")
+  ((C-@) "‍")) ; independent ends
+
+ (ayogavAhas
+  ; Visarga and the like may appear after a vowel. So, they aren't expected just in the dependent state.
+  (".N" "ँ") ; TODO: Change to kn glyph.
+  ("M" "ಂ")
+  ("H" "ಃ")
+  ("HH" "ᳲ")  ; ardhavisarga - often used to denote jihvAmUlIya and upadhmAnIya. 
+ ) ; ayogavAhas end
+
+ (ayogavAhas_with_consonant
+   ; jihvAmUlIya and upadhmAnIya shortcuts
+  ("Hk" "ೱ" (pushback 1))
+  ("Hp" "ೲ" (pushback 1))
+  ("Hkh" "ೱ" (pushback 1)) 
+  ("Hph" "ೲ" (pushback 1))
+  ("HK" "ೱ" (pushback 1)) 
+  ("HP" "ೲ" (pushback 1))
+  ) ; ayogavAhas_with_consonant ends
+
+ 
+ (digit
+  ("0" "೦")
+  ("1" "೧")
+  ("2" "೨")
+  ("3" "೩")
+  ("4" "೪")
+  ("5" "೫")
+  ("6" "೬")
+  ("7" "೭")
+  ("8" "೮")
+  ("9" "೯")
+  ((KP_0) "೦")
+  ((KP_1) "೧")
+  ((KP_2) "೨")
+  ((KP_3) "೩")
+  ((KP_4) "೪")
+  ((KP_5) "೫")
+  ((KP_6) "೬")
+  ((KP_7) "೭")
+  ((KP_8) "೮")
+  ((KP_9) "೯")) ; digit ends
+
+ (udattta
+  ("_" "॒")
+  ("''" "॑"))
+
+ (dependent
+  ("a" "")
+  ("aa" "ಾ")
+  ("A" "ಾ")
+  ("i" "ಿ")
+  ("ii" "ೀ")
+  ("I" "ೀ")
+  ("u" "ು")
+  ("uu" "ೂ")
+  ("U" "ೂ")
+  ("R" "ೃ")
+  ("RRi" "ೃ")
+  ("R^i" "ೃ")
+  ("LLi" "ೢ")
+  ("L^i" "ೢ")
+  ("e" "ೆ")
+  ("E" "ೇ")
+  ("ee" "ೇ")
+  ("ai" "ೈ")
+  ("o" "ೊ")
+  ("O" "ೋ")
+  ("oo" "ೋ")
+  ("au" "ೌ")
+  ("RR" "ೄ")
+  ("RRI" "ೄ")
+  ("R^I" "ೄ")
+  ("LLI" "ೄ")
+  ("L^I" "ೄ")
+  (";" "್")
+  (".h" "್")
+  ) ; dependent end
+
+ (dot_start
+  (".." "।")
+  (".," "॥")
+  ("./" "॰")
+  (". " "।" (pushback 1))
+  ((?. Return) "।" (pushback 1))
+  ((?. Tab) "।" (pushback 1))
+  (".(" "।" (pushback 1))
+  (".)" "।" (pushback 1))
+  (".[" "।" (pushback 1))
+  (".]" "।" (pushback 1))
+  (".{" "।" (pushback 1))
+  (".}" "।" (pushback 1))
+  (".'" "।" (pushback 1))
+  (".\"" "।" (pushback 1))) ; dot_start ends
+
+ (commit-key
+  ((S-C-Return)))
+
+ (backspace
+  ((BackSpace) (undo)))
+  ) ; map ends
+
+(state
+ (state_init
+  (non_init_keys (pushback 1) (shift state_indic_letter))
+  (udattta)
+  (digit)
+  (commit-key)
+  )
+
+ (state_indic_letter
+  (consonant (shift state_consonant_pressed))
+  (ayogavAhas_with_consonant (shift state_consonant_pressed))
+  (consonant_with_space (shift state_init))
+  (consonant_with_viraama (shift state_init))
+  (independent (shift state_init))
+  (dot_start (shift state_init))
+  (backspace)
+  (ayogavAhas (shift state_init))
+  )
+
+ (state_consonant_pressed
+  (consonant)
+  (ayogavAhas_with_consonant)
+  (consonant_with_space (shift state_init))
+  (consonant_with_viraama (shift state_init))
+  (dependent (shift state_init))
+  (dot_start (shift state_init))
+  (backspace)
+  (ayogavAhas (shift state_init))
+  )
+) ; state ends
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: emacs-lisp
+;; End:

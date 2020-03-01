@@ -1,0 +1,206 @@
+;; lsymbol.mim -- input method for various symbols.
+;; Copyright (C) 2014  K. Handa  <handa@gnu.org>
+
+;; This file is part of the m17n library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+(input-method t lsymbol)
+
+(description (_"Input method for symbols with relatively longer key sequences.
+It provides access to a broad category of symbols by using the
+technique of showing multiple alternatives based on the starter keys
+pressed.  For instance,
+   \"/->\" -> arrows (e.g. →↑)
+   \"/||\" -> hand genstures (e.g. 👍👎)
+   \"/:)\" -> happy faces (e.g. ☺😃)
+   \"/:(\" -> unhappy faces (e.g. 😢😡)
+   \"/<3\" -> hearts (e.g. ♥♡)
+   \"/*\"  -> flowers and stars (e.g. 🌹★)
+   \"&&\" -> spiritual (e.g. ☸☯)   \"/xx\" -> checks (e.g. ✔✘)
+   \"$\" -> currency (€£)          \"@\" -> legal/text signs (e.g "©¶")
+
+The user can select the appropriate symbol using ↑,↓,→,←
+(or C-p, C-n, C-f, C-b) keys and/or the digits.
+
+Other miscellaneous keys are:
+   \"//\" -> \"/\"
+   \"/...\" -> \"…\"
+
+This input methods is registered as one of fallback input methods by default.
+See the documentation page of m17n input methods for more detail.
+  <http://www.nongnu.org/m17n/manual-en/m17nDBData.html#mim-list>"))
+
+;; Some guidelines for determining shortcut sequences:
+
+;;  * Where appropriate, provide access to a broad category of
+;;  symbols by using the technique of showing multiple alternatives
+;;  based on the starter keys pressed.
+;;
+;;  * Prefer restricting the size of a character cluster to 6 - so
+;;  that the user can use digits more accessible to the left hand,
+;;  with arrow keys using the right hand. For example, prefer
+;;  "♥♡💔💖💘💓" "💞💕💌" to "♥♡💔💖💘💓💞💕💌".
+
+;;  * Within a group (say hand gestures), cluster semantically
+;;  similar symbols together.
+
+;;  * Keyboard shortcuts used in popular applications provide clues
+;;  as to what the appropriate
+
+;; Some references:
+
+;; * Some statistics are available online. Example
+;; http://www.scribd.com/doc/262594751/SwiftKey-Emoji-Report
+;; (guardian highlight) and http://emojitracker.com/.  Although, this
+;; is biased towards populations who are already tech savvy + have
+;; the time to type emojis easily and does not give as much weight to
+;; people who are just beginning to use IM/ digital communication.
+
+;; * There are other indications of popularity - such as other
+;; products (say MS Office or Facebook or Google Hangouts, who would
+;; presumably have adapted towards user expectations) providing
+;; shortcuts for these emoji-s.
+;;
+;;    * General lists: http://fsymbols.com/computer/ http://emojipedia.org/
+;;    * Emoticon shortcuts in MS Office: https://support.office.com/en-us/article/Keyboard-shortcuts-for-emoticons-dda403dc-ffe9-4cbb-9b9f-aed845ff8b8c
+;;    * Facebook shortcuts: http://www.shoutmeloud.com/list-of-facebook-keyboard-shortcuts-and-emoticons.html http://emojicodes.com/
+
+(map
+ ;; All starter keys must be registered here.
+ (starter ("/" "/"))
+
+ ;; Mapping table.  Each key sequence should not include the starter
+ ;; key.
+ (map
+  ("/" "/")
+  ("..." "…"))
+
+ (multi-choice
+  ;; arrows
+  ("->" (delete @0) ("→←↑↓" "👉👈👆👇✋" "►◄▲▾◤◥◣◢"))
+
+  ;; hand gestures
+  ("||" (delete @0) ("👍👎👌✋👏🙆" "🙏👋🙌✌✊👊" "💁🙋💪✍💆💅"))
+
+  ;; happy faces
+  (":)" (delete @0) ("☺😃😅😆😉😇😂" "😏😛😜😝😋😉" "💏💋😍😘😚😽😻"))
+
+  ;; unhappy faces
+  (":(" (delete @0) ("😢😩😡😭😪" "🙈🙊🙉"))
+
+  ;; neutral faces
+  (":|" (delete @0) ("🤔"))
+
+  ;; hearts
+  ("<3" (delete @0) ("♥♡💔💖💘💓" "💞💕💌💑😍😘"))
+
+  ;; *-like things: flowers, stars, other bright things, snowflakes
+  ("*" (delete @0) ("🌹💐❁✽" "★☆⭐🌟💫✨🌠✯🌃" "☀❂✷✸✹🌞⛅🌅🌇" "💡☄⚡ϟ🔥🌈🎆" "❄❆❅"))
+
+  ;; spiritual symbols.
+  ("&&" (delete @0) ("💀☠👹👼😇" "卍卐☸☯♋☬" "✝☦✙✡☪💒⛪" "🙈🙊🙉"))
+
+  ;; checks
+  ("xx" (delete @0) ("✔✘☐☑☒"))
+
+  ;; currency symbols
+  ("$" (delete @0) ("€£¥﷼₱₹" "💰💵💶💴💷"))
+
+  ;; legal signs and text signs
+  ("@" (delete @0) ("©®™§¶†‡"))
+
+  ;; zero width joiners
+  ("z" (delete @0) ("‌"))
+  )
+
+ ;; Typing 1, 2, ..., 0 selects the 0th, 1st, ..., 9th candidate.
+ (choose
+  ("1" (select 0))
+  ("2" (select 1))
+  ("3" (select 2))
+  ("4" (select 3))
+  ("5" (select 4))
+  ("6" (select 5))
+  ("7" (select 6))
+  ("8" (select 7))
+  ("9" (select 8))
+  ("0" (select 9)))
+
+ (change-candidate
+  ((Left) (select @-))
+  ((C-b) (select @-))
+  ((Right) (select @+))
+  ((C-f) (select @+))
+  ((Up) (select @\[))
+  ((C-p) (select @\[))
+  ((Down) (select @\]))
+  ((C-n) (select @\])))
+
+ (focus-move
+  ;; When an input spot is moved, commit the current predit by shifting
+  ;; to init.
+  ((input-focus-move)))
+
+ (focus-change
+  ;; When an input focus is out or in, keep the current preedit.
+  ((input-focus-out) (set KK @@) (sub KK 1) (undo KK))
+  ((input-focus-in) (set KK @@) (sub KK 1) (undo KK)))
+
+ (backspace
+  ((BackSpace)))
+
+ (commit-preedit
+  ((S-\ ))
+  ((\ ))))
+
+(state
+ (init
+  (starter (show) (shift main)))
+
+ (main
+  (map (move @<) (delete 1) (move @>) (shift init))
+  (multi-choice (show) (shift select))
+  (nil (hide) (shift check-undo)))
+
+ (check-undo
+  ;; When Backspace is typed, cancel the last input.
+  (backspace (undo))
+  (focus-move (shift init))
+  (focus-change)
+  ;; When anything else is typed, produce the current candidate (if
+  ;; any), and re-handle the last input in "init" state.
+  (nil (hide) (shift init)))
+
+ (select
+  (t (set K @@) (sub K 1))
+  ;; When a number is typed, select the corresponding canidate,
+  ;; produce it, and shift to "init" state.
+  (focus-move (shift init))
+  (focus-change)
+  (choose (hide) (shift init))
+  (change-candidate)
+  (backspace (undo K))
+  ;; When key to force committing, commit the current preedit.
+  (commit-preedit (shift init))
+  ;; When anything else is typed, produce the current candidate,
+  ;; and re-handle the last input in "init" state.
+  (nil (hide) (shift init))))
+
+;; Local Variables:
+;; mode: lisp
+;; coding: utf-8
+;; End:

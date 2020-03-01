@@ -1,0 +1,278 @@
+;; kn-itrans.mim -- Kannada input method with ITRANS method
+;; Copyright (C) 2003, 2004, 2005, 2006, 2007
+;;   National Institute of Advanced Industrial Science and Technology (AIST)
+;;   Registration Number H15PRO112
+;; Copyright (C) 2013  Vishvas Vasuki  <vishvas.vasuki@gmail.com>
+
+;; Tiny change by Hari Prasad Nadig, Kannada l10n Team, kannada.l10n@gmail.com
+;; http://kannada.sourceforge.net/  18 Aug 2005. 
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+(input-method kn itrans)
+
+(description "Kannada input method by ITRANS, Baraha and Harvard-Kyoto
+transliteration systems.
+You can use all the standard ITRANS key sequences plus key
+sequences such as the below.
+
+nk->ಂಕ್, nkh->ಂಖ್, ng->ಂಗ್, ngh->ಂಘ್
+nch->ಂಚ್, nCh->ಂಛ್, nc->ಂಚ್, nC->ಂಛ್, nchh->ಂಛ್,
+nj->ಂಜ್, njh->ಂಝ್, nT->ಂಟ್, nTh->ಂಠ್, nD->ಂಡ್, nDh->ಂಢ್
+c->ಚ್, C->ಛ್, z->ಶ್, S->ಷ್, jn->ಜ್ಞ್, R->ಋ
+
+The motivation behind additions made to the basic ITRANS scheme
+is described in https://sanskrit-coders.github.io/site/pages/input/optitrans.html,
+along with a tabulated comparison with several other
+transliteration schemes.
+
+Earlier changes:
+Kannada l10n Team, kannada.l10n@gmail.com
+  <http://kannada.sourceforge.net>
+on 18 Aug 2005. 
+")
+
+(title "ಕ")
+
+(map
+ (starter
+  (".") ("~") ("#") ("$") ("^") ("*") ((S-\ )) ((C-@))
+  ("0") ("1") ("2") ("3") ("4")
+  ("5") ("6") ("7") ("8") ("9")
+  ("A") ("C") ("D") ("E") ("G") ("H") ("I") ("J") ("K") 
+  ("L") ("M") ("N") ("O") ("R") ("S") ("T") ("U") ("Y")
+  ("a") ("b") ("c") ("d") ("e") ("f") ("g") ("h") ("i")
+  ("j") ("k") ("l") ("m") ("n") ("o") ("p") ("q") ("r")
+  ("s") ("t") ("u") ("v") ("w") ("x") ("y") ("z")
+  ((KP_1)) ((KP_2)) ((KP_3)) ((KP_4)) ((KP_5))
+  ((KP_6)) ((KP_7)) ((KP_8)) ((KP_9)) ((KP_0)))
+
+ (consonant
+  ("k" "ಕ್")
+  ("kh" "ಖ್")
+  ("K" "ಖ್")
+  ("g" "ಗ್")
+  ("gh" "ಘ್")
+  ("G" "ಘ್")
+  (".k" "ಕ಼್‌ ")
+  ("q" "ಕ಼್‌")
+  (".kh" "ಖ಼್‌")
+  (".K" "ಖ಼್‌")
+  (".g" "ಗ಼್‌")
+  ("nk" "ಂಕ್")
+  ("nx" "ಂಕ್ಷ್")
+  ("ng" "ಂಗ್")
+  ("ngh" "ಂಘ್")
+  ("nG" "ಂಘ್")
+  ("~N" "ಙ್")
+  ("N^" "ಙ್")
+  ("ch" "ಚ್")
+  ("Ch" "ಛ್")
+  ("c" "ಚ್")
+  ("C" "ಛ್")
+  ("chh" "ಛ್")
+  ("j" "ಜ್")
+  ("jh" "ಝ್")
+  ("J" "ಝ್")
+  ("nch" "ಂಚ್")
+  ("nCh" "ಂಛ್")
+  ("nc" "ಂಚ್")
+  ("nC" "ಂಛ್")
+  ("nchh" "ಂಛ್")
+  ("nj" "ಂಜ್")
+  ("njh" "ಂಝ್")
+  ("nJ" "ಂಝ್")
+  ("~n" "ಞ್")
+  ("JN" "ಞ್")
+  ("T" "ಟ್")
+  ("Th" "ಠ್")
+  ("D" "ಡ್")
+  ("Dh" "ಢ್")
+  ("nT" "ಂಟ್")
+  ("nTh" "ಂಠ್")
+  ("nD" "ಂಡ್")
+  ("nDh" "ಂಢ್")
+  ("N" "ಣ್")
+  ("t" "ತ್")
+  ("th" "ಥ್")
+  ("d" "ದ್")
+  ("dh" "ಧ್")
+  ("n" "ನ್")
+  ("p" "ಪ್")
+  ("ph" "ಫ್")
+  (".ph" "ಫ಼್‌")
+  ("f" "ಫ಼್‌")
+  ("b" "ಬ್")
+  ("bh" "ಭ್")
+  ("m" "ಮ್")
+  ("y" "ಯ್")
+  ("r" "ರ್")
+  ("RH" "ಱ್")				; not in ITRANS Kannada table
+  ("l" "ಲ್")
+  ("L" "ಳ್")
+  ("ld" "ಳ್")				; not in ITRANS Kannada table
+  ("v" "ವ್")
+  ("w" "ವ್")				; not in ITRANS Kannada table
+  ("sh" "ಶ್")
+  ("z" "ಜ಼್‌")
+  (".j" "ಜ಼್‌")
+  ("S" "ಷ್")
+  ("Sh" "ಷ್")
+  ("shh" "ಷ್")
+  ("s" "ಸ್")
+  ("h" "ಹ್")
+  ("f" "ೞ್")				; not in ITRANS Kannada table
+  ("GY" "ಜ್ಞ್")
+  ("jn" "ಜ್ಞ್")
+  ("j~n" "ಜ್ಞ್")
+  ("dny" "ಜ್ಞ್")			; not in ITRANS Kannada table
+  ("x" "ಕ್ಷ್")
+  ("ks" "ಕ್ಸ್")
+  ("ksh" "ಕ್ಷ್")
+ )
+
+ (independent
+  ("a" "ಅ")
+  ("aa" "ಆ")
+  ("A" "ಆ")
+  ("i" "ಇ")
+  ("ii" "ಈ")
+  ("I" "ಈ")
+  ("u" "ಉ")
+  ("uu" "ಊ")
+  ("U" "ಊ")
+  ("RRi" "ಋ")
+  ("R^i" "ಋ")
+  ("R" "ಋ")        ; not in ITRANS Kannada table
+  ("Ru" "ಋ")        ; not in ITRANS Kannada table
+;;("LLi" "ಌ")				; (conflict) commented, to support the LL consonant cluster
+  ("L^i" "ಌ")
+;;("Lru" "ಌ")				; not in ITRANS Kannada table ; (objection) LRu is more appropriate
+  ("LRu" "ಌ") 				; not in ITRANS Kannada table ; (correction) Replaces "Lru"
+  ("e" "ಎ")
+  ("E" "ಏ")
+  ("ee" "ಏ")				; not in ITRANS Kannada table
+  ("ai" "ಐ")
+  ("o" "ಒ")
+  ("O" "ಓ")
+  ("oo" "ಓ")				; not in ITRANS Kannada table
+  ("au" "ಔ")
+  ("RR" "ೠ")
+  ("RRI" "ೠ")
+  ("R^I" "ೠ")
+  ("RU" "ೠ")        ; not in ITRANS Kannada table
+;;("LLI" "ೡ")				; (conflict) commented, to support the LL consonant cluster
+  ("L^I" "ೡ")
+  ("LRU" "ೡ")				; not in ITRANS Kannada table
+  (".n" "ಂ")
+  ("M" "ಂ")				; not in ITRANS Kannada table
+  ("H" "ಃ")
+  ("kH" "ೱ")
+  ("pH" "ೲ")
+  (".h" "್")				; not in ITRANS Kannada table
+  (".a" "ಽ")
+  (".." "।")            ; not in ITRANS Devanagari table
+  (".," "॥")            ; not in ITRANS Devanagari table
+  ("." ".")
+  ("..." "…")
+  ("_" "॒")
+  ("''" "॑")
+  ("0" "೦")
+  ("1" "೧")
+  ("2" "೨")
+  ("3" "೩")
+  ("4" "೪")
+  ("5" "೫")
+  ("6" "೬")
+  ("7" "೭")
+  ("8" "೮")
+  ("9" "೯")
+  ("#" "್ರ")				; not in ITRANS Kannada table
+  ("$" "ರ್")				; not in ITRANS Kannada table
+  ((KP_1) "೧")
+  ((KP_2) "೨")
+  ((KP_3) "೩")
+  ((KP_4) "೪")
+  ((KP_5) "೫")
+  ((KP_6) "೬")
+  ((KP_7) "೭")
+  ((KP_8) "೮")
+  ((KP_9) "೯")
+  ((KP_0) "೦")
+  ((S-\ ) "‌")				; not in ITRANS Kannada table
+  ((C-@) "‍"))				; not in ITRANS Kannada table
+
+ (dependent
+  ("a" (delete @-) "")
+  ("aa" (delete @-) "ಾ")
+  ("A" (delete @-) "ಾ")
+  ("i" (delete @-) "ಿ")
+  ("ii" (delete @-) "ೀ")
+  ("I" (delete @-) "ೀ")
+  ("u" (delete @-) "ು")
+  ("uu" (delete @-) "ೂ")
+  ("U" (delete @-) "ೂ")
+  ("R" (delete @-) "ೃ")
+  ("RRi" (delete @-) "ೃ")
+  ("R^i" (delete @-) "ೃ")
+  ("Ru" (delete @-) "ೃ") 		; not in ITRANS kannada table ; (consistency) added to sync with the independent "Ru"
+  ("RR" (delete @-) "ೄ")
+  ("RRI" (delete @-) "ೄ")
+  ("R^I" (delete @-) "ೄ")
+  ("RU" (delete @-) "ೄ") 		; not in ITRANS kannada table ; (consistency) adde to sync with the independent "RU"
+;;("LLi" (delete @-) "ೄ")		; not in ITRANS Kannada table ; (conflict) commented, to support the LL consonant cluster
+  ("L^i" (delete @-) "ೄ")		; not in ITRANS Kannada table ; (conflict) commented, to support the LL consonant cluster
+  ("e" (delete @-) "ೆ")
+  ("E" (delete @-) "ೇ")
+  ("ee" (delete @-) "ೇ")		; not in ITRANS Kannada table
+  ("ai" (delete @-) "ೈ")
+  ("o" (delete @-) "ೊ")
+  ("O" (delete @-) "ೋ")
+  ("oo" (delete @-) "ೋ")		; not in ITRANS Kannada table
+  ("au" (delete @-) "ೌ")
+;;("LLI" (delete @-) "")		; not in ITRANS Kannada table ; (conflict) commented, to support the LL consonant cluster
+  ("L^I" (delete @-) "")		; not in ITRANS Kannada table
+ )
+
+ (return
+  ((Return)))
+
+ (backspace
+  ((BackSpace) (undo))))
+
+(state
+ (init
+  (starter (pushback 1) (shift intermediate)))
+
+ (intermediate
+  (consonant (shift second))
+  (independent (shift init))
+  (backspace)
+  (return (shift init)))
+
+ (second
+  (consonant)
+  (dependent (shift init))
+  (backspace)
+  (return (shift init))))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: emacs-lisp
+;; End:

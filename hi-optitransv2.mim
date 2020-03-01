@@ -1,0 +1,418 @@
+;; hi-optitransv2.mim -- Hindi input method.
+;; Copyright (C) 2015  Vishvas Vasuki  <vishvas.vasuki@gmail.com>
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+(input-method hi optitransv2)
+
+(description "Hindi input method by the OPTITRANS
+transliteration system. 
+
+0. A major deviation from other transliteration systems like ITRANS and HK
+is that latin consonants are mapped to the correpsonding devanAgarI consonant *followed by the 
+vowel a*. For example, k maps to क, not क्.
+
+1. panchama-varNa-s of vyanjana-varga-s 
+  nnk->ङ्क, nnkh->ङ्ख, nng->ङ्ग, nngh->ङ्घ
+  nnch->ञ्च, nnCh->ञ्छ, nnc->ञ्च, nnC->ञ्छ,
+
+2. Any common consonant, typed twice, yields that consonant with the virAma. So, nn yields न्. The rationale is that a repeated consonant such as नन and दद is far less common than the consonants with a virAma, such as न् and द्.
+
+3. The rare character sequences that conflict with shortcuts for more frequently occuring strings can be typed using the "commit key" - (Ctrl + Shift  + Enter), or with the use of the arrow key. 
+For example, sh yields श. But if one wanted to type सह, one can type: s<Commit key>h or s<left arrow, right arrow>h.
+
+Examples:
+- Avoiding unnecessary 'a'-s.
+  - kml or kamala - कमल 
+- Typing vyanjana-s with a virAma
+  - sikkt - सिक्त
+  - sik;t - सिक्त
+- Shortcut for typing panchama-s/ anunAsika-s of vargIya-vyanjana-s
+  - shankara or shnnkr- शङ्कर।
+  - snncit - सञ्चित
+  - shann karoti - शङ् करोति।
+- Overriding shortcuts
+  - pashyann  karoti - पश्यन् करोति। (Note two spaces here. Avoids पश्यङ् करोति )
+  - s<Commit key>h or s<left arrow, right arrow>h or sah or saha - सह (Avoids श)
+
+The motivation behind additions made to the basic ITRANS scheme
+is described in https://sites.google.com/site/sanskritcode/optitrans,
+along with a tabulated comparison with several other
+transliteration schemes.
+
+Note: You can use many symbols defined in lsymbol.mim.
+
+Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
+
+(title "क")
+
+(map
+ (non_init_keys
+  (".") (";") ("~") ("$")
+  ("A") ("B") ("C") ("D") ("E") ("F") ("G") ("H") ("I") ("J") ("K") ("L")
+  ("M") ("N") ("O") ("P") ("Q") ("R") ("S") ("T") ("U") ("V") ("W") ("X") ("Y") ("Z") 
+  ("a") ("b") ("c") ("d") ("e") ("f") ("g") ("h") ("i")
+  ("j") ("k") ("l") ("m") ("n") ("o") ("p") ("q") ("r")
+  ("s") ("t") ("u") ("v") ("w") ("x") ("y") ("z")
+  )
+
+ (consonant
+  ("k" "क")
+  ("kh" "ख")
+  ("K" "ख")
+  ("g" "ग")
+  ("gh" "घ")
+  ("G" "घ")
+  (".k" "क़")
+  ("q" "क़")
+  (".kh" "ख़")
+  (".K" "ख़")
+  (".g" "ग़")
+  ("~N" "ङ")
+  ("N^" "ङ")
+  ("ch" "च")
+  ("Ch" "छ")
+  ("c" "च")
+  ("C" "छ")
+  ("chh" "छ")
+  ("j" "ज")
+  ("jh" "झ")
+  ("J" "झ")
+  ("~n" "ञ")
+  ("T" "ट")
+  ("Th" "ठ")
+  ("D" "ड")
+  ("Dh" "ढ")
+  (".D" "ड़")
+  (".Dh" "ढ़")
+  ("N" "ण")
+  ("t" "त")
+  ("th" "थ")
+  ("d" "द")
+  ("dh" "ध")
+  ("n" "न")
+  (":n" "ऩ")
+  ("p" "प")
+  ("ph" "फ")
+  ("P" "फ")
+  (".ph" "फ़")
+  ("f" "फ़")
+  ("b" "ब")
+  ("bh" "भ")
+  ("B" "भ")
+  ("m" "म")
+  ("y" "य")
+  ("Y" "य़")
+  ("yh" "य़")
+  (".y" "य़")
+  ("r" "र")
+  ("l" "ल")
+  ("L" "ळ")
+  ("v" "व")
+  ("w" "व")
+  ("sh" "श")
+  ("Z" "ज़")
+  (".j" "ज़")
+  ("z" "श")
+  ("S" "ष")
+  ("Sh" "ष")
+  ("shh" "ष")
+  ("s" "स")
+  ("h" "ह")
+  ("jjn" "ज्ञ")
+  ("JN" "ज्ञ")
+  ("x" "क्ष")
+  
+  ; Best keys for the below are not clear.
+  ; ("gH"  ॻ)
+  ; ("jH"  ॼ)
+  ; ("DH"  "ॾ")
+  ; ("BH"  "ॿ")
+
+  ; nn shortcuts
+  ("nnk" "ङ्" (pushback 1))
+  ("nnx" "ङ्" (pushback 1))
+  ("nnkh" "ङ्" (pushback 1))
+  ("nnK" "ङ्" (pushback 1))
+  ("nng" "ङ्" (pushback 1))
+  ("nngh" "ङ्" (pushback 1))
+  ("nnG" "ङ्" (pushback 1))
+  ("nnch" "ञ्" (pushback 1))
+  ("nnCh" "ञ्" (pushback 1))
+  ("nnc" "ञ्" (pushback 1))
+  ("nnC" "ञ्" (pushback 1))
+  ("nnj" "ञ्" (pushback 1))
+  ("nnjh" "ञ्" (pushback 1))
+  ("nnJ" "ञ्" (pushback 1))
+
+  ("nnT" "ण्" (pushback 1))
+  ("nnTh" "ण्" (pushback 1))
+  ("nnD" "ण्" (pushback 1))
+  ("nnDh" "ण्" (pushback 1))
+
+  ) ; consonant ends
+
+(consonant_with_space
+  ; nn shortcuts with space
+  ("nn " "न् ")
+  ("nn  " "न् ") ; handle the case where the transformation to ङ् etc.. is not desired, even when followed by a character like k.
+  ("nn k" "ङ् " (pushback 1))
+  ("nn x" "ङ् " (pushback 1))
+  ("nn K" "ङ् " (pushback 1))
+  ("nn g" "ङ् " (pushback 1))
+  ("nn G" "ङ् " (pushback 1))
+  ("nn c" "ञ् " (pushback 1))
+  ("nn C" "ञ् " (pushback 1))
+  ("nn j" "ञ् " (pushback 1))
+  ("nn J" "ञ् " (pushback 1))
+
+  ("nn T" "ण् " (pushback 1))
+  ("nn D" "ण् " (pushback 1))
+  ) ; consonant_with_space ends
+
+(consonant_with_viraama
+  ; virAma shortcuts
+  ("kk" "क्")
+  ("khkh" "ख्")
+  ("KK" "ख्")
+  ("gg" "ग्")
+  ("ghgh" "घ्")
+  ("GG" "घ्")
+  ("~N~N" "ङ्")
+  ("chch" "च्")
+  ("ChCh" "छ्")
+  ("cc" "च्")
+  ("CC" "छ्")
+  ("jj" "ज्")
+  ("jhjh" "झ्")
+  ("JJ" "झ्")
+  ("~n~n" "ञ्")
+  ("JNJN" "ञ्")
+  ("TT" "ट्")
+  ("ThTh" "ठ्")
+  ("DD" "ड्")
+  ("DhDh" "ढ्")
+  ("NN" "ण्")
+  ("tt" "त्")
+  ("thth" "थ्")
+  ("dd" "द्")
+  ("dhdh" "ध्")
+  ("nn" "न्")
+  ("pp" "प्")
+  ("phph" "फ्")
+  ("PP" "फ्")
+  ("FF" "फ़्")
+  ("bb" "ब्")
+  ("bhbh" "भ्")
+  ("BB" "भ्")
+  ("mm" "म्")
+  ("M" "ं")
+  ("MM" "म्")
+  ("yy" "य्")
+  ("rr" "र्")
+  ("ll" "ल्")
+  ("LL" "ळ्")
+  ("vv" "व्")
+  ("shsh" "श्")
+  ("ZZ" "ज़्")
+  (".j.j" "ज़्")
+  ("zz" "श्")
+  ("SS" "ष्")
+  ("ShSh" "ष्")
+  ("ss" "स्")
+  ("hh" "ह्")
+  ("xx" "क्ष्")
+  ("jjnjjn" "ज्ञ्")
+  ("JNJN" "ज्ञ्")
+  ) ; consonant_with_viraama ends
+
+ (independent
+  ("a" "अ")
+  ("aa" "आ")
+  ("A" "आ")
+  ("i" "इ")
+  ("ii" "ई")
+  ("I" "ई")
+  ("u" "उ")
+  ("uu" "ऊ")
+  ("U" "ऊ")
+  ("R" "ऋ")
+  ("RRi" "ऋ")
+  ("R^i" "ऋ")
+  ("LLi" "ऌ")
+  ("L^i" "ऌ")
+  ("ea" "ऍ")
+  ("ee" "ऎ")
+  ("E" "ऎ")
+  ("e" "ए")
+  ("ai" "ऐ")
+  ("oo" "ऒ")
+  ("O" "ऒ")
+  ("o" "ओ")
+  ("oa" "ऑ")
+  ("au" "औ")
+  ("RRI" "ॠ")
+  ("RR" "ॠ")
+  ("R^I" "ॠ")
+  ("LLI" "ॡ")
+  ("L^I" "ॡ")
+  ("AUM" "ॐ")
+  ("OM" "ॐ")
+  
+  (".a" "ऽ")
+  ((S-\ ) "‌")
+  ((C-@) "‍")) ; independent ends
+
+ (ayogavAhas
+  ; Visarga and the like may appear after a vowel. So, they aren't expected just in the dependent state.
+  (".N" "ँ")
+  ("M" "ं")
+  ("H" "ः")
+  ("HH" "ᳲ")  ; ardhavisarga - often used to denote jihvAmUlIya and upadhmAnIya. 
+ ) ; ayogavAhas end
+
+ (ayogavAhas_with_consonant
+   ; jihvAmUlIya and upadhmAnIya shortcuts
+  ("Hk" "ᳵ" (pushback 1)) 
+  ("Hp" "ᳶ" (pushback 1))
+  ("Hkh" "ᳵ" (pushback 1)) 
+  ("Hph" "ᳶ" (pushback 1))
+  ("HK" "ᳵ" (pushback 1)) 
+  ("HP" "ᳶ" (pushback 1))
+  ) ; ayogavAhas_with_consonant ends
+
+ 
+ (digit
+  ("0" "०")
+  ("1" "१")
+  ("2" "२")
+  ("3" "३")
+  ("4" "४")
+  ("5" "५")
+  ("6" "६")
+  ("7" "७")
+  ("8" "८")
+  ("9" "९")
+  ((KP_0) "०")
+  ((KP_1) "१")
+  ((KP_2) "२")
+  ((KP_3) "३")
+  ((KP_4) "४")
+  ((KP_5) "५")
+  ((KP_6) "६")
+  ((KP_7) "७")
+  ((KP_8) "८")
+  ((KP_9) "९")) ; digit ends
+
+ (udattta
+  ("_" "॒")
+  ("''" "॑"))
+
+ (dependent
+  ("a" "")
+  ("aa" "ा")
+  ("A" "ा")
+  ("i" "ि")
+  ("ii" "ी")
+  ("I" "ी")
+  ("u" "ु")
+  ("uu" "ू")
+  ("U" "ू")
+  ("R" "ृ")
+  ("RRi" "ृ")
+  ("R^i" "ृ")
+  ("LLi" "ॢ")
+  ("L^i" "ॢ")
+  ("ea" "ॅ")
+  ("ee" "ॆ")
+  ("E" "ॆ")
+  ("e" "े")
+  ("ai" "ै")
+  ("oo" "ॊ")
+  ("O" "ॊ")
+  ("o" "ो")
+  ("oa" "ॉ")
+  ("au" "ौ")
+  ("RR" "ॄ")
+  ("RRI" "ॄ")
+  ("R^I" "ॄ")
+  ("LLI" "ॣ")
+  ("L^I" "ॣ")
+  (";" "्")
+  (".h" "्")
+  ) ; dependent end
+
+ (dot_start_default
+  (".." "।")
+  (".," "॥")
+  ("./" "॰")
+  (". " "।" (pushback 1))
+  ((?. Return) "।" (pushback 1))
+  ((?. Tab) "।" (pushback 1))
+  (".(" "।" (pushback 1))
+  (".)" "।" (pushback 1))
+  (".[" "।" (pushback 1))
+  (".]" "।" (pushback 1))
+  (".{" "।" (pushback 1))
+  (".}" "।" (pushback 1))
+  (".'" "।" (pushback 1))
+  (".\"" "।" (pushback 1))) ; dot_start_default ends
+
+ (commit-key
+  ((S-C-Return)))
+
+ (backspace
+  ((BackSpace) (undo)))
+  ) ; map ends
+
+(state
+ (state_init
+  (non_init_keys (pushback 1) (shift state_indic_letter))
+  (udattta)
+  (digit)
+  (commit-key)
+  )
+
+ (state_indic_letter
+  (consonant (shift state_consonant_pressed))
+  (ayogavAhas_with_consonant (shift state_consonant_pressed))
+  (consonant_with_space (shift state_init))
+  (consonant_with_viraama (shift state_init))
+  (independent (shift state_init))
+  (dot_start_default (shift state_init))
+  (backspace)
+  (ayogavAhas (shift state_init))
+  )
+
+ (state_consonant_pressed
+  (consonant)
+  (ayogavAhas_with_consonant)
+  (consonant_with_space (shift state_init))
+  (consonant_with_viraama (shift state_init))
+  (dependent (shift state_init))
+  (dot_start_default (shift state_init))
+  (backspace)
+  (ayogavAhas (shift state_init))
+  )
+) ; state ends
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: emacs-lisp
+;; End:
