@@ -65,10 +65,10 @@ Key summary: Rajesh Ranjan <rranjan@redhat.com>
   ((KP_Multiply) "*")
   ((KP_Add) "+")
   ((KP_Subtract) "-") 
- 
-  ("!" ?ऍ)
+
+  ("!" ?॑)
   ("1" ?१)
-  ("@" ?ॅ)
+  ("@" ?॒)
   ("2" ?२)
   ("#" ?#)
   ("3" ?३)
