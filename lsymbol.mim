@@ -29,6 +29,7 @@ pressed.  For instance,
    \"/:)\" -> happy faces (e.g. ☺😃)
    \"/:(\" -> unhappy faces (e.g. 😢😡)
    \"/<3\" -> hearts (e.g. ♥♡)
+   \"/^\" ->  math symbols (e.g. √)
    \"/*\"  -> flowers and stars (e.g. 🌹★)
    \"&&\" -> spiritual (e.g. ☸☯)   \"/xx\" -> checks (e.g. ✔✘)
    \"$\" -> currency (€£)          \"@\" -> legal/text signs (e.g "©¶")
@@ -122,6 +123,9 @@ See the documentation page of m17n input methods for more detail.
 
   ;; legal signs and text signs
   ("@" (delete @0) ("©®™§¶†‡"))
+
+  ;; math symbols
+  ("^" (delete @0) ("√"))
 
   ;; zero width joiners
   ("z" (delete @0) ("‌"))
