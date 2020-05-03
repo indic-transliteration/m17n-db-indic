@@ -26,7 +26,7 @@
 ;; Urs Holzer wrote StateMath.mim, and Vishvas Vasuki
 ;; modified it and wrote this file.
 
-(input-method t mathlatex)
+(input-method t math-latex)
 
 (description "Mathematics input method using LaTeX command names.")
 
