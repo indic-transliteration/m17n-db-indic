@@ -53,7 +53,7 @@ For instance, as the default value of this variable is \"lsymbol, unicode\",
 when you type \"/...\" while you are activating an input method
 that doesn't handle that key sequence, \"lsymbol\" input method is activated
 and \"…\" (U+2026: HORIZONTAL ELLIPSIS) is inserted.")
-  "lsymbol, ssymbol, unicode"))
+  "lsymbol, ssymbol, math-latex, unicode"))
 
 (command
  (commit
