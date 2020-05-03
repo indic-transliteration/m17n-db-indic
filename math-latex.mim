@@ -80,6 +80,7 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("cross"       "×")
     ("times"       "×")
     ("infty"       "∞")
+    ("inf"       "∞")
     ("infinity"    "∞")
     ("circ"        "∘") ; This is 0x2218, not 0x00b0
     ("compl"       "∁") ; This is 0x2201, not c or C
@@ -119,6 +120,7 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("<<"          "≪")
     (">>"          "≫")
     ("ident"       "≡")
+    ("equiv"       "≡")
     ("apeq"        "≅")
     ("almeq"       "≈")
     ("approx"       "≈")
@@ -166,7 +168,6 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("Or"          "⋁") ; n-ary logical or
     ("not"         "¬") ; Crashes with the combining overly slash?
     ("entails"          "⊨")
-    ("implies"       "⇒")
 
     ("modulo"      "∕") ; Division slash, the right one?
     ("dslash"      "∕") ; Division slash
@@ -340,7 +341,7 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("-sD"         "↕")
     ("dl"       "⇒")
     ("dh"       "⇐")
-    ("dd"       "⇔")
+    ("<>"       "⇔")
     ("barl"     "↦")
     ("mapsto"   "↦")
     ) ; math ends
