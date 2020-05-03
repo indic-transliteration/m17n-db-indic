@@ -96,7 +96,7 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("curlbottom"  "⏟") ; Bottom curly bracket
 
     ("division"    "÷")
-    ("sqr"    "√ ")
+    ("sqr"    "√")
     ("plusminus"   "±")
     ("minusplus"   "∓")
 
