@@ -52,7 +52,7 @@ Examples:
   - s<Commit key>h or s<left arrow, right arrow>h or sah or saha - सह (Avoids श)
 
 The motivation behind additions made to the basic ITRANS scheme
-is described in https://sites.google.com/site/sanskritcode/optitrans,
+is described in https://sanskrit-coders.github.io/input/optitrans/ ,
 along with a tabulated comparison with several other
 transliteration schemes.
 
