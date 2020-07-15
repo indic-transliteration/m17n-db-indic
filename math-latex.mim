@@ -85,6 +85,7 @@ you don't have to turn off this input method to input normal ASCII characters.")
     ("circ"        "∘") ; This is 0x2218, not 0x00b0
     ("compl"       "∁") ; This is 0x2201, not c or C
     ("partial"     "∂")
+    ("sect"     "§")
     ("laplace"     "∆")
     ("na")
     ("nabla"       "∇")
