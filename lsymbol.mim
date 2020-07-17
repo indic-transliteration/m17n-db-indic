@@ -128,7 +128,7 @@ See the documentation page of m17n input methods for more detail.
   ("^" (delete @0) ("√"))
 
   ;; zodiac symbols
-  ("z" (delete @0) ("♈︎♉︎♊♋︎︎♌♍♎♏︎︎︎︎♐︎♑︎♒︎♓︎"))
+  ("z" (delete @0) ("♈♉♊♋♌♍♎♏♐♑♒♓"))
 
   ;; astrological planet symbols
   ("p" (delete @0) ("☉☽☿♀⊕♂♃♄♅♆♇"))
