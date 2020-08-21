@@ -121,15 +121,23 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("CCC" "C") ; adding this code for intuitive use.
 ("JJJ" "J") ; adding this code for intuitive use.
 ("~N" "Ñ")
+("tt" "tt")
 ("ttt" "T") ; And not mUrdhanya T
+("dd" "dd")
 ("ddd" "D") ; And not mUrdhanya D
+("nn" "nn")
 ("nnn" "N") ; And not mUrdhanya N.
+("TT" "ṭṭ")
 ("TTT" "Ṭ") ; Note extra T compared to lowercase map.
+("DD" "DD")
 ("DDD" "Ḍ") ; Note extra D compared to lowercase map.
+("NN" "NN")
 ("NNN" "N") ; Note extra N compared to lowercase map.
+("PP" "PP")
 ("PPP" "P") ; adding this code for intuitive use.
+("BB" "BB")
 ("BBB" "B") ; B works just fine - still adding this code for intuitive use.
-("MMM" "M") 
+("MM" "M") 
 ("~Y" "Y") ; adding this code for intuitive use.
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.
