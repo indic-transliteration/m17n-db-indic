@@ -115,59 +115,54 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 
 ; Capitals for use in the beginnings of words.
 ("~~" "~")
-("~K" "K") ; adding this code for intuitive use.
-("~G" "G") ; adding this code for intuitive use.
-("~;N" "Ṇ")
-("~C" "C") ; adding this code for intuitive use.
-("~J" "J") ; adding this code for intuitive use.
-("~~n" "Ñ")
-("~T" "T") ; And not mUrdhanya T
-("~D" "D") ; And not mUrdhanya D
-("~N" "N") ; And not mUrdhanya N.
-("~TT" "Ṭ") ; Note extra T compared to lowercase map.
-("~DD" "Ḍ") ; Note extra D compared to lowercase map.
-("~NN" "Ṇ") ; Note extra N compared to lowercase map.
-("~P" "P") ; adding this code for intuitive use.
-("~B" "B") ; B works just fine - still adding this code for intuitive use.
-("~M" "M") 
+("KK" "K") ; adding this code for intuitive use.
+("GG" "G") ; adding this code for intuitive use.
+(";N" "Ṇ")
+("CCC" "C") ; adding this code for intuitive use.
+("JJJ" "J") ; adding this code for intuitive use.
+("~N" "Ñ")
+("ttt" "T") ; And not mUrdhanya T
+("ddd" "D") ; And not mUrdhanya D
+("nnn" "N") ; And not mUrdhanya N.
+("TTT" "Ṭ") ; Note extra T compared to lowercase map.
+("DDD" "Ḍ") ; Note extra D compared to lowercase map.
+("NNN" "N") ; Note extra N compared to lowercase map.
+("PPP" "P") ; adding this code for intuitive use.
+("BBB" "B") ; B works just fine - still adding this code for intuitive use.
+("MMM" "M") 
 ("~Y" "Y") ; adding this code for intuitive use.
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.
 ("~V" "V") ; adding this code for intuitive use.
 ("~sh" "Ś")
-("~Sh" "Ś") ; And not mUrdhanya Sh.
+("SHSH" "Ṣ") ; And not mUrdhanya Sh.
 ("~SH" "Ṣ")
 ("~SS" "Ṣ") ; Note the extra S compared to lower case output map.
 ("~S" "S")  ; And not mUrdhanya Sh.
 ("~LL" "Ḷ")  ; Note the extra L compared to lower case output map.
-("~x" "Kṣ")
-("~X" "KṢ")
+("XX" "KṢ")
 ("~jn" "Jñ")
 ("~GY" "Jñ")
 ("~JN" "JÑ")
 
 ("~A" "A")
-("~aa" "Ā")
-("~AA" "Ā") ; Note the extra A compared to lower case output map.
-("~ii" "Ī")
-("~I" "Ī")
-("~uu" "Ū")
-("~U" "Ū")
-("~RR" "R̥") ; Note the extra R compared to lower case output map.
-("~RRi" "R̥")
-("~R^i" "R̥")
-("~RRI" "R̥̄")	; not in ITRANS Devanagari table
-("~RRR" "R̥̄")	; Note the extra R compared to lower case output map.
-("~R^I" "R̥̄")	; not in ITRANS Devanagari table
+("~I" "I")
+("~U" "U")
+("~R" "R")
+("~L" "L")
+("~E" "E")	; not in ITRANS Devanagari table
+("~O" "O")
+("AA" "Ā") ; Note the extra A compared to lower case output map.
+("II" "Ī")
+("UU" "Ū")
+("RRR" "R̥")
+("RRRR" "R̥̄")
+("EE" "Ē")
+("OO" "Ō")
 ("~LLi" "L̥")	; not in ITRANS Devanagari table
 ("~LLI" "L̥̄")	; not in ITRANS Devanagari table
 ("~L^I" "L̥̄")	; not in ITRANS Devanagari table
 ("EA" "Æ") ; not in ITRANS Devanagari table
-("~ee" "E")	; not in ITRANS Devanagari table
-("~E" "Ē")	; not in ITRANS Devanagari table
-("~EE" "E")
-("~e" "Ē")
-("~O" "Ō")	; not in ITRANS Devanagari table
 ("~OO" "O")
 ("~oo" "O") ; not in ITRANS Devanagari table
 ("~o" "Ō")
