@@ -137,7 +137,7 @@ on 18 Aug 2005.
   ("shh" "ಷ್")
   ("s" "ಸ್")
   ("h" "ಹ್")
-  ("f" "ೞ್")				; not in ITRANS Kannada table
+  ("LH" "ೞ್")				; not in ITRANS Kannada table
   ("GY" "ಜ್ಞ್")
   ("jn" "ಜ್ಞ್")
   ("j~n" "ಜ್ಞ್")
@@ -203,8 +203,6 @@ on 18 Aug 2005.
   ("7" "೭")
   ("8" "೮")
   ("9" "೯")
-  ("#" "್ರ")				; not in ITRANS Kannada table
-  ("$" "ರ್")				; not in ITRANS Kannada table
   ((KP_1) "೧")
   ((KP_2) "೨")
   ((KP_3) "೩")
