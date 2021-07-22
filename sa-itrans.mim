@@ -47,7 +47,12 @@ For motivations and further details, see description of hi-itrans.mim.")
 (map
  (udattta
   ("_" "॒")
-  ("''" "॑")))
+  ("_" "꣣")
+  ("''" "॑")
+  ("'''" "꣢")
+  ("'\"" "꣢")
+  ("!!" "꣡")
+  ))
 
 (state
  (init
