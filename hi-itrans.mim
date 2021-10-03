@@ -205,7 +205,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   (".h" "्")
   ("AUM" "ॐ")
   ("OM" "ॐ")
-  ((C-S-\ ) "‌")		      ; not in ITRANS Devanagari table
+  ((C-#) "‌")		      ; not in ITRANS Devanagari table
   ((C-@) "‍"))			      ; not in ITRANS Devanagari table
 
  (digit

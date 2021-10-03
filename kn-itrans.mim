@@ -213,7 +213,7 @@ on 18 Aug 2005.
   ((KP_8) "೮")
   ((KP_9) "೯")
   ((KP_0) "೦")
-  ((S-\ ) "‌")				; not in ITRANS Kannada table
+  ((C-#) "‌")				; not in ITRANS Kannada table
   ((C-@) "‍"))				; not in ITRANS Kannada table
 
  (dependent
