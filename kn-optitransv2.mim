@@ -344,7 +344,6 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
  (dot_start
   (".." "।")
   (".," "॥")
-  ("./" "॰")
   (". " "।" (pushback 1))
   ((?. Return) "।" (pushback 1))
   ((?. Tab) "।" (pushback 1))

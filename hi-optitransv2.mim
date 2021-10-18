@@ -363,7 +363,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
  (dot_start_default
   (".." "।")
   (".," "॥")
-  ("./" "॰")
+  ("..." "॰")
   (". " "।" (pushback 1))
   ((?. Return) "।" (pushback 1))
   ((?. Tab) "।" (pushback 1))

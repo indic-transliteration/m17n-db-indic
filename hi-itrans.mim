@@ -272,6 +272,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   (".." "।")			      ; not in ITRANS Devanagari table
   (".," "॥")			      ; not in ITRANS Devanagari table
   (". " "।" (pushback 1))
+  ("..." "॰")
   ((?. Return) "।" (pushback 1))
   ((?. Tab) "।" (pushback 1))
   (".(" "।" (pushback 1))
