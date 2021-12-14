@@ -142,8 +142,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.
 ("~V" "V") ; adding this code for intuitive use.
-("~sh" "Ś")
-("SHSH" "Ṣ") ; And not mUrdhanya Sh.
+("~sh" "Ś") ; And not mUrdhanya Sh.
+("SHSH" "Ṣ")
 ("~SH" "Ṣ")
 ("~SS" "Ṣ") ; Note the extra S compared to lower case output map.
 ("~S" "S")  ; And not mUrdhanya Sh.
