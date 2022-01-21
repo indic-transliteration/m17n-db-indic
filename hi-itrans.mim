@@ -137,6 +137,8 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("yh" "य़्")           ; not in ITRANS Devanagari table
   (".y" "य़्")
   ("r" "र्")
+  ("RH" "ऱ्")				; not in ITRANS table
+  ("rH" "ऱ्")				; not in ITRANS table
   ("l" "ल्")
   ("L" "ळ्")
   ("LH" "ऴ्")
