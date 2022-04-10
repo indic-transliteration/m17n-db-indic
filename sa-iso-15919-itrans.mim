@@ -103,8 +103,10 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 (".n" "ṁ")
 ("M" "ṁ")
 ("Ml" "l̐l") ; perhaps not in ISO 15919, but useful to represent anunAsika l
-("Mv" "v̐v") ; perhaps not in ISO 15919, but useful to represent anunAsika v
-("My" "y̐y") ; perhaps not in ISO 15919, but useful to represent anunAsika v
+("Mv" "ṁv")
+("My" "ṁy")
+("MV" "v̐v") ; perhaps not in ISO 15919, but useful to represent anunAsika v
+("MY" "y̐y") ; perhaps not in ISO 15919, but useful to represent anunAsika v
 ("H" "ḥ")
 ("kH" "ẖ") 
 ("pH" "ḫ")
