@@ -63,7 +63,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("DR" "ṛ")
 (".r" "ṛ")
 ("L" "ḷ")
-(".L" "ḻ")
+("LH" "ḻ")
 ("sh" "ś")
 (".j" "z")
 ("S" "ṣ")
@@ -139,6 +139,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~SS" "Ṣ") ; Note the extra S compared to lower case output map.
 ("~S" "S")  ; And not mUrdhanya Sh.
 ("~LL" "Ḷ")  ; Note the extra L compared to lower case output map.
+("~LH" "Ḻ")  ; Note the extra L compared to lower case output map.
 ("~x" "Kṣ")
 ("~X" "KṢ")
 ("~jn" "Jñ")
