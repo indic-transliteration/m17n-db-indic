@@ -47,10 +47,10 @@ For motivations and further details, see description of hi-itrans.mim.")
 (map
  (udattta
   ("_" "॒")
-  ("_" "꣣")
+  ("__" "꣣")
   ("''" "॑")
-  ("'''" "꣢")
-  ("'\"" "꣢")
+  ("'''" "꣡") ; More frequently used than  \꣢, so should be able to type easily. 
+  ("\"\"" "꣢")
   ("!!" "꣡")
   ))
 
