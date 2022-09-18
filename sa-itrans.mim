@@ -50,6 +50,7 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("__" "꣣")
   ("''" "॑")
   ("'''" "꣡") ; More frequently used than  \꣢, so should be able to type easily. 
+  ("\'\"\"" "᳡")
   ("\'\"" "꣢") ; "" is not suitable since it is frequently typed with the intention of inserting text between the quotes.
   ("!!" "꣡")
   ))
