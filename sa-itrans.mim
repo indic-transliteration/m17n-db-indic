@@ -47,7 +47,8 @@ For motivations and further details, see description of hi-itrans.mim.")
 (map
  (udattta
   ("_" "॒")
-  ("__" "꣣")
+  ("__" "᳘")
+  ("___" "꣣")
   ("''" "॑")
   ("'''" "꣡") ; More frequently used than  \꣢, so should be able to type easily. 
   ("\'\"\"" "᳡")
