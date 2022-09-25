@@ -99,6 +99,32 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("R^I" "r̥̄")	; not in ITRANS Devanagari table
 ("LLI" "l̥̄")	; not in ITRANS Devanagari table
 ("L^I" "l̥̄")	; not in ITRANS Devanagari table
+
+("``" "̀")
+("''" "́")
+("a''" "á")
+("i''" "í")
+("u''" "ú")
+("uu''" "ṹ")
+("U''" "ṹ")
+
+
+("ea" "æ") ; not in ITRANS Devanagari table
+("ee''" "ḗ")	; not in ITRANS Devanagari table
+("E''" "ḗ")	; not in ITRANS Devanagari table
+("oo''" "ṓ") ; not in ITRANS Devanagari table
+("O''" "ṓ")	; not in ITRANS Devanagari table
+
+("a``" "á")
+("i``" "ì")
+("u``" "ù")
+("uu``" "ṹ")
+("U``" "ṹ")
+("ee``" "ḕ")	; not in ITRANS Devanagari table
+("E``" "ḕ")	; not in ITRANS Devanagari table
+("oo``" "ṑ") ; not in ITRANS Devanagari table
+("O``" "ṑ")	; not in ITRANS Devanagari table
+
 (".N" "m̐")
 (".n" "ṁ")
 ("M" "ṁ")
