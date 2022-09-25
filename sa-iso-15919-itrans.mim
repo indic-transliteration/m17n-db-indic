@@ -110,7 +110,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 
 
 ("ea" "æ") ; not in ITRANS Devanagari table
-("ee''" "ḗ")	; not in ITRANS Devanagari table
+("e''" "ḗ")	; not in ITRANS Devanagari table
 ("E''" "ḗ")	; not in ITRANS Devanagari table
 ("oo''" "ṓ") ; not in ITRANS Devanagari table
 ("O''" "ṓ")	; not in ITRANS Devanagari table
@@ -120,9 +120,9 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("u``" "ù")
 ("uu``" "ṹ")
 ("U``" "ṹ")
-("ee``" "ḕ")	; not in ITRANS Devanagari table
+("e``" "ḕ")	; not in ITRANS Devanagari table
 ("E``" "ḕ")	; not in ITRANS Devanagari table
-("oo``" "ṑ") ; not in ITRANS Devanagari table
+("o``" "ṑ") ; not in ITRANS Devanagari table
 ("O``" "ṑ")	; not in ITRANS Devanagari table
 
 (".N" "m̐")
