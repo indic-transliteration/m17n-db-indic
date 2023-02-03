@@ -40,7 +40,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("ng" "ṅg")
 ("ngh" "ṅgh")
 ("nG" "ṅgh")
-(";N" "ṅ")  ; mutated from ITRANS - to allow for capital N input
+("~N" "ṅ")  
 ("nch" "ñc")
 ("nCh" "ñch")	; not in ITRANS Devenagari table
 ("nc" "ñc")
@@ -148,7 +148,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 (";N" "Ṇ")
 ("CCC" "C") ; adding this code for intuitive use.
 ("JJJ" "J") ; adding this code for intuitive use.
-("~N" "Ñ")
+("~NN" "Ñ")
 ("tt" "tt")
 ("ttt" "T") ; And not mUrdhanya T
 ("dd" "dd")
