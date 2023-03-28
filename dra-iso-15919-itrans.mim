@@ -11,7 +11,8 @@ nc->ñc, nch->ñch, nj->ñj, njh->ñjh,
 nT->ṇṭ, nTh->ṇṭh, nD->ṇḍ, nDh->ṇḍh
 S->ṣ, jn->jñ, R->r̥
 
-Unlike Sanskrit, e and o are not automatically mapped to ē and ō.
+Unlike classical Sanskrit, e and o are not automatically mapped to ē and ō.  
+So, this also serves to type via reconstructed vedic pronunciation sanskrit, where ai=ए, Ai=ऐ, au=ओ, Au=औ.
 
 Capital letters may be produced or forced by prefixing a ~, reduplicating a letter (T,D,N,R) for disambiguation where necessary. For example: 
 
@@ -25,6 +26,7 @@ along with a tabulated comparison with several other
 transliteration schemes.
 
 Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
+
 
 (title "dra iso-15919")
 
@@ -40,7 +42,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("ng" "ṅg")
 ("ngh" "ṅgh")
 ("nG" "ṅgh")
-(";N" "ṅ")  ; mutated from ITRANS - to allow for capital N input
+("~N" "ṅ")  
 ("nch" "ñc")
 ("nCh" "ñch")	; not in ITRANS Devenagari table
 ("nc" "ñc")
@@ -93,7 +95,6 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("oo" "ō") ; not in ITRANS Devanagari table
 ("O" "ō")	; not in ITRANS Devanagari table
 ("oa" "ô")
-("au" "au")
 ("RRI" "r̥̄")	; not in ITRANS Devanagari table
 ("RR" "r̥̄")	; not in ITRANS Devanagari table
 ("R^I" "r̥̄")	; not in ITRANS Devanagari table
@@ -120,8 +121,6 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("a``" "á")
 ("i``" "ì")
 ("u``" "ù")
-("uu``" "ṹ")
-("U``" "ṹ")
 ("ee``" "ḕ")	; not in ITRANS Devanagari table
 ("E``" "ḕ")	; not in ITRANS Devanagari table
 ("oo``" "ṑ") ; not in ITRANS Devanagari table
@@ -132,8 +131,10 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 (".n" "ṁ")
 ("M" "ṁ")
 ("Ml" "l̐l") ; perhaps not in ISO 15919, but useful to represent anunAsika l
-("Mv" "v̐v") ; perhaps not in ISO 15919, but useful to represent anunAsika v
-("My" "y̐y") ; perhaps not in ISO 15919, but useful to represent anunAsika v
+("Mv" "ṁv")
+("My" "ṁy")
+("MV" "v̐v") ; perhaps not in ISO 15919, but useful to represent anunAsika v
+("MY" "y̐y") ; perhaps not in ISO 15919, but useful to represent anunAsika v
 ("H" "ḥ")
 ("kH" "ẖ") 
 ("pH" "ḫ")
@@ -143,6 +144,31 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("OM" "ōṁ")
 
 ; Capitals for use in the beginnings of words.
+("KK" "K") ; adding this code for intuitive use.
+("GG" "G") ; adding this code for intuitive use.
+(";N" "Ṇ")
+("CCC" "C") ; adding this code for intuitive use.
+("JJJ" "J") ; adding this code for intuitive use.
+("tt" "tt")
+("ttt" "T") ; And not mUrdhanya T
+("dd" "dd")
+("ddd" "D") ; And not mUrdhanya D
+("nn" "nn")
+("nnn" "N") ; And not mUrdhanya N.
+("TT" "ṭṭ")
+("TTT" "Ṭ") ; Note extra T compared to lowercase map.
+("DD" "DD")
+("DDD" "Ḍ") ; Note extra D compared to lowercase map.
+("NN" "NN")
+("NNN" "N") ; Note extra N compared to lowercase map.
+("PP" "PP")
+("PPP" "P") ; adding this code for intuitive use.
+("BB" "BB")
+("BBB" "B") ; B works just fine - still adding this code for intuitive use.
+("MM" "M") 
+("SHSH" "Ṣ")
+("XX" "KṢ")
+
 ("~~" "~")
 ("~K" "K") ; adding this code for intuitive use.
 ("~G" "G") ; adding this code for intuitive use.
@@ -175,6 +201,14 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~jn" "Jñ")
 ("~GY" "Jñ")
 ("~JN" "JÑ")
+
+("AA" "Ā") ; Note the extra A compared to lower case output map.
+("II" "Ī")
+("UU" "Ū")
+("RRR" "R̥")
+("RRRR" "R̥̄")
+("EE" "Ē")
+("OO" "Ō")
 
 ("~A" "A")
 ("~aa" "Ā")

@@ -11,7 +11,8 @@ nc->ñc, nch->ñch, nj->ñj, njh->ñjh,
 nT->ṇṭ, nTh->ṇṭh, nD->ṇḍ, nDh->ṇḍh
 S->ṣ, jn->jñ, R->r̥
 
-For Sanskrit, e and o are automatically mapped to ē and ō.
+For Sanskrit, e and o are automatically mapped to ē and ō.  
+To type via reconstructed vedic pronunciation (ai=ए, Ai=ऐ, au=ओ, Au=औ) or for dravidian letters, look into using dra-iso-15919-itrans.mim instead. 
 
 Capital letters may be produced or forced by prefixing a ~, reduplicating a letter (T,D,N,R) for disambiguation where necessary. For example: 
 
