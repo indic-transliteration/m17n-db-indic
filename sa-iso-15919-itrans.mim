@@ -118,8 +118,6 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("a``" "á")
 ("i``" "ì")
 ("u``" "ù")
-("uu``" "ṹ")
-("U``" "ṹ")
 ("e``" "ḕ")	; not in ITRANS Devanagari table
 ("E``" "ḕ")	; not in ITRANS Devanagari table
 ("o``" "ṑ") ; not in ITRANS Devanagari table
