@@ -114,7 +114,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("oo''" "ṓ") ; not in ITRANS Devanagari table
 ("O''" "ṓ")	; not in ITRANS Devanagari table
 
-("a``" "á")
+("a``" "à")
 ("i``" "ì")
 ("u``" "ù")
 ("e``" "ḕ")	; not in ITRANS Devanagari table
