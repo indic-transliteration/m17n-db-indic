@@ -64,6 +64,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("DR" "ṛ")
 (".r" "ṛ")
 ("L" "ḷ")
+("LH" "ḻ")
 ("sh" "ś")
 (".j" "z")
 ("S" "ṣ")
@@ -74,6 +75,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("GY" "jñ")
 ("dny" "jñ")	; not in ITRANS Devanagari table
 ("x" "kṣ")
+
 ("aa" "ā")
 ("A" "ā")
 ("ii" "ī")
@@ -122,6 +124,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("o``" "ṑ") ; not in ITRANS Devanagari table
 ("O``" "ṑ")	; not in ITRANS Devanagari table
 
+
 (".N" "m̐")
 (".n" "ṁ")
 ("M" "ṁ")
@@ -139,13 +142,11 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("OM" "ōṁ")
 
 ; Capitals for use in the beginnings of words.
-("~~" "~")
 ("KK" "K") ; adding this code for intuitive use.
 ("GG" "G") ; adding this code for intuitive use.
 (";N" "Ṇ")
 ("CCC" "C") ; adding this code for intuitive use.
 ("JJJ" "J") ; adding this code for intuitive use.
-("~NN" "Ñ")
 ("tt" "tt")
 ("ttt" "T") ; And not mUrdhanya T
 ("dd" "dd")
@@ -163,29 +164,42 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("BB" "BB")
 ("BBB" "B") ; B works just fine - still adding this code for intuitive use.
 ("MM" "M") 
+("SHSH" "Ṣ")
+("XX" "KṢ")
+
+("~~" "~")
+("~K" "K") ; adding this code for intuitive use.
+("~G" "G") ; adding this code for intuitive use.
+("~;N" "Ṇ")
+("~C" "C") ; adding this code for intuitive use.
+("~J" "J") ; adding this code for intuitive use.
+("~~n" "Ñ")
+("~T" "T") ; And not mUrdhanya T
+("~D" "D") ; And not mUrdhanya D
+("~N" "N") ; And not mUrdhanya N.
+("~TT" "Ṭ") ; Note extra T compared to lowercase map.
+("~DD" "Ḍ") ; Note extra D compared to lowercase map.
+("~NN" "Ṇ") ; Note extra N compared to lowercase map.
+("~P" "P") ; adding this code for intuitive use.
+("~B" "B") ; B works just fine - still adding this code for intuitive use.
+("~M" "M") 
 ("~Y" "Y") ; adding this code for intuitive use.
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.
 ("~V" "V") ; adding this code for intuitive use.
 ("~sh" "Ś") ; And not mUrdhanya Sh.
 ("~Sh" "Ś") ; And not mUrdhanya Sh.
-("SHSH" "Ṣ")
 ("~SH" "Ṣ")
 ("~SS" "Ṣ") ; Note the extra S compared to lower case output map.
 ("~S" "S")  ; And not mUrdhanya Sh.
 ("~LL" "Ḷ")  ; Note the extra L compared to lower case output map.
-("XX" "KṢ")
+("~LH" "Ḻ")  ; Note the extra L compared to lower case output map.
+("~x" "Kṣ")
+("~X" "KṢ")
 ("~jn" "Jñ")
 ("~GY" "Jñ")
 ("~JN" "JÑ")
 
-("~A" "A")
-("~I" "I")
-("~U" "U")
-("~R" "R")
-("~L" "L")
-("~E" "E")	; not in ITRANS Devanagari table
-("~O" "O")
 ("AA" "Ā") ; Note the extra A compared to lower case output map.
 ("II" "Ī")
 ("UU" "Ū")
@@ -193,6 +207,20 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("RRRR" "R̥̄")
 ("EE" "Ē")
 ("OO" "Ō")
+
+("~A" "A")
+("~aa" "Ā")
+("~AA" "Ā") ; Note the extra A compared to lower case output map.
+("~ii" "Ī")
+("~I" "Ī")
+("~uu" "Ū")
+("~U" "Ū")
+("~RR" "R̥") ; Note the extra R compared to lower case output map.
+("~RRi" "R̥")
+("~R^i" "R̥")
+("~RRI" "R̥̄")	; not in ITRANS Devanagari table
+("~RRR" "R̥̄")	; Note the extra R compared to lower case output map.
+("~R^I" "R̥̄")	; not in ITRANS Devanagari table
 ("~LLi" "L̥")	; not in ITRANS Devanagari table
 ("~LLI" "L̥̄")	; not in ITRANS Devanagari table
 ("~L^I" "L̥̄")	; not in ITRANS Devanagari table

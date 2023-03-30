@@ -116,7 +116,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("oo''" "ṓ") ; not in ITRANS Devanagari table
 ("O''" "ṓ")	; not in ITRANS Devanagari table
 
-("a``" "á")
+("a``" "à")
 ("i``" "ì")
 ("u``" "ù")
 ("ee``" "ḕ")	; not in ITRANS Devanagari table
@@ -187,7 +187,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.
 ("~V" "V") ; adding this code for intuitive use.
-("~sh" "Ś")
+("~sh" "Ś") ; And not mUrdhanya Sh.
 ("~Sh" "Ś") ; And not mUrdhanya Sh.
 ("~SH" "Ṣ")
 ("~SS" "Ṣ") ; Note the extra S compared to lower case output map.
