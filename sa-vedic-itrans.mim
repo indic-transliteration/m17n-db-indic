@@ -194,6 +194,9 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("pH" "ᳶ")
   (".a" "ऽ")
   (".h" "्")
+  ;; Below we add some keys so as to be able to type mAtrA-s without a
+  ;; preceding consonant. This is especially useful for searching
+  ;; through text.
   (".aa" "ा")
   (".A" "ा")
   (".i" "ि")
