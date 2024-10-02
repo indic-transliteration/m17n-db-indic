@@ -44,7 +44,7 @@ For motivations and further details, see description of hi-itrans.mim.")
 
 (map
  (starter
-  (".") ("!") ("~") ("#") ("$") ("*") ("]") ((C-#)) ((C-@))
+  (".") (";") ("!") ("~") ("#") ("$") ("*") ("]") ((C-#)) ((C-@))
   ("0") ("1") ("2") ("3") ("4") ("5") ("6") ("7") ("8") ("9")
   ("A") ("C") ("D") ("E") ("G") ("H") ("I") ("J") ("K") ("L")
   ("M") ("N") ("O") ("R") ("S") ("T") ("U") ("Y")
@@ -109,7 +109,7 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("d" "द्")
   ("dh" "ध्")
   ("n" "न्")
-  (":n" "ऩ्")			      ; not in ITRANS Devanagari table
+  (";n" "ऩ्")			      ; not in ITRANS Devanagari table
   ("p" "प्")
   ("ph" "फ्")
   ("P" "फ्")
