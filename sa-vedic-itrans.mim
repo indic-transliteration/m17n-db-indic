@@ -109,7 +109,8 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("d" "द्")
   ("dh" "ध्")
   ("n" "न्")
-  (";n" "ऩ्")			      ; not in ITRANS Devanagari table
+  (";n" "ऩ्")			      ; not in ITRANS Devanagari table; useful for tamil & maNipravALa
+  ("nH" "ऩ्")			      ; not in ITRANS Devanagari table; useful for tamil & maNipravALa
   ("p" "प्")
   ("ph" "फ्")
   ("P" "फ्")
@@ -124,8 +125,12 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("yh" "य़्")           ; not in ITRANS Devanagari table
   (".y" "य़्")
   ("r" "र्")
-  ("RH" "ऱ्")				; not in ITRANS table
-  ("rH" "ऱ्")				; not in ITRANS table
+  ("NRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
+  ("nRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
+  ("nrH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
+  ("RH" "ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
+  ("RRH" "ऱ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
+  ("rH" "ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("l" "ल्")
   ("L" "ळ्")
   ("LH" "ऴ्")
