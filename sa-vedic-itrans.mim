@@ -127,7 +127,6 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("r" "र्")
   ("NRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("nRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
-  ("nrH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("RH" "ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("RRH" "ऱ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("rH" "ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
@@ -193,11 +192,13 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("R^I" "ॠ")			      ; not in ITRANS Devanagari table
   ("LLI" "ॡ")			      ; not in ITRANS Devanagari table
   ("L^I" "ॡ")			      ; not in ITRANS Devanagari table
+  ("nR" "नृ")			      ; To compensate for nRH shortcut
+  ("nRR" "नॄ")
   (".N" "ँ")
   (".n" "ं")
   ("M" "ं")
   ("H" "ः")
-  ("kH" "ᳵ") 
+  ("kH" "ᳵ")
   ("pH" "ᳶ")
   (".a" "ऽ")
   (".h" "्")
