@@ -253,7 +253,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~LLi" "L̥")	; not in ITRANS Devanagari table
 ("~LLI" "L̥̄")	; not in ITRANS Devanagari table
 ("~L^I" "L̥̄")	; not in ITRANS Devanagari table
-("EA" "Æ") ; not in ITRANS Devanagari table
+("~E" "E")
+("AE" "Æ") ; not in ITRANS Devanagari table
 ("~OO" "O")
 ("~oo" "O") ; not in ITRANS Devanagari table
 ("~o" "Ō")
