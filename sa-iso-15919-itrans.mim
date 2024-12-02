@@ -131,9 +131,9 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 
 ("ea" "æ") ; not in ITRANS Devanagari table
 ("e''" "ḗ")	; not in ITRANS Devanagari table
-("E''" "ḗ")	; not in ITRANS Devanagari table
+("E''" "é")	; not in ITRANS Devanagari table. Useful for spanish etc..
 ("oo''" "ṓ") ; not in ITRANS Devanagari table
-("O''" "ṓ")	; not in ITRANS Devanagari table
+("O''" "ó")	; not in ITRANS Devanagari table. Useful for spanish etc..
 
 ("a``" "à")
 ("i``" "ì")
@@ -141,7 +141,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("e``" "ḕ")	; not in ITRANS Devanagari table
 ("E``" "ḕ")	; not in ITRANS Devanagari table
 ("o``" "ṑ") ; not in ITRANS Devanagari table
-("O``" "ṑ")	; not in ITRANS Devanagari table
+("O``" "ò")	; not in ITRANS Devanagari table
 
 
 (".N" "m̐")
@@ -225,7 +225,11 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("RRR" "R̥")
 ("RRRR" "R̥̄")
 ("EE" "Ē")
+("EE``" "Ḕ")
+("EE''" "Ḗ")
 ("OO" "Ō")
+("OO``" "Ṑ")
+("OO''" "Ṓ")
 
 ("~A" "A")
 ("~aa" "Ā")
