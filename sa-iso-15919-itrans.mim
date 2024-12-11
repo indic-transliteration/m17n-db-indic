@@ -60,7 +60,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("ng" "ṅg")
 ("ngh" "ṅgh")
 ("nG" "ṅgh")
-("~N" "ṅ")  
+("~N" "ṅ")
 ("nch" "ñc")
 ("nCh" "ñch")	; not in ITRANS Devenagari table
 ("nc" "ñc")
@@ -128,6 +128,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("LLI" "l̥̄")	; not in ITRANS Devanagari table
 ("L^I" "l̥̄")	; not in ITRANS Devanagari table
 
+; : Á á É é Ế ế Ḗ ḗ Í í Ī́  i ó Ố ố Ṓ ṓ Ŕ ŕ Ĺ ĺ Ú ú  Ū́
+
 ("``" "̀")
 ("''" "́")
 ("a''" "á")
@@ -159,7 +161,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("MV" "v̐v") ; perhaps not in ISO 15919, but useful to represent anunAsika v
 ("MY" "y̐y") ; perhaps not in ISO 15919, but useful to represent anunAsika v
 ("H" "ḥ")
-("kH" "ẖ") 
+("kH" "ẖ")
 ("pH" "ḫ")
 (".a" "’")
 (".h" "")
@@ -188,7 +190,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("PPP" "P") ; adding this code for intuitive use.
 ("BB" "BB")
 ("BBB" "B") ; B works just fine - still adding this code for intuitive use.
-("MM" "M") 
+("MM" "M")
 ("SHSH" "Ṣ")
 ("XX" "KṢ")
 
@@ -207,7 +209,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~NN" "Ṇ") ; Note extra N compared to lowercase map.
 ("~P" "P") ; adding this code for intuitive use.
 ("~B" "B") ; B works just fine - still adding this code for intuitive use.
-("~M" "M") 
+("~M" "M")
 ("~Y" "Y") ; adding this code for intuitive use.
 ("~R" "R") ; adding this code for intuitive use.
 ("~L" "L") ; adding this code for intuitive use.

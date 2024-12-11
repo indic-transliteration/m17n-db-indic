@@ -88,6 +88,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("sh" "ś")
 (".j" "z")
 ("S" "ṣ")
+("SS" "ç") ; portuguese
 ("Sh" "ṣ")
 ("jn" "jñ")
 ("j~n" "jñ")
@@ -97,6 +98,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("x" "kṣ")
 
 ("aa" "ā")
+("aaa" "â") ; not in ITRANS Devanagari table. Useful for portuguese.
+("~a" "ã") ; not in ITRANS Devanagari table. Useful for portuguese.
 ("A" "ā")
 ("ii" "ī")
 ("I" "ī")
@@ -108,12 +111,16 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("LL" "ḷḷ")	; not in ITRANS Devanagari table
 ("LLi" "l̥")	; not in ITRANS Devanagari table
 ("L^i" "l̥")	; not in ITRANS Devanagari table
-("ea" "æ") ; not in ITRANS Devanagari table
+("ae" "æ") ; not in ITRANS Devanagari table
 ("ee" "ē")	; not in ITRANS Devanagari table
 ("E" "ē")	; not in ITRANS Devanagari table
 ("oo" "ō") ; not in ITRANS Devanagari table
+("ie" "ê") ;  Useful for portuguese.
 ("O" "ō")	; not in ITRANS Devanagari table
-("oa" "ô")
+("oa" "ô") 
+("ooo" "ô") ; Useful for portuguese 
+("~o" "õ") ; portuguese etc..
+("au" "au")
 ("RRI" "r̥̄")	; not in ITRANS Devanagari table
 ("RR" "r̥̄")	; not in ITRANS Devanagari table
 ("R^I" "r̥̄")	; not in ITRANS Devanagari table
@@ -243,10 +250,10 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~LLi" "L̥")	; not in ITRANS Devanagari table
 ("~LLI" "L̥̄")	; not in ITRANS Devanagari table
 ("~L^I" "L̥̄")	; not in ITRANS Devanagari table
-("EA" "Æ") ; not in ITRANS Devanagari table
+("~E" "E")
 ("~ee" "Ē")	; not in ITRANS Devanagari table
 ("~EE" "Ē")
-("~E" "E")
+("AE" "Æ") ; not in ITRANS Devanagari table
 ("~O" "O")	; not in ITRANS Devanagari table
 ("~OO" "Ō")
 ("~oo" "Ō") ; not in ITRANS Devanagari table
