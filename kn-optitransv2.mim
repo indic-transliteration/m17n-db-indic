@@ -65,7 +65,7 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 
 (map
  (non_init_keys
-  (".") (";") ("~") ("$")
+  (".")  ("-") (";") ("~") ("$")
   ("A") ("B") ("C") ("D") ("E") ("F") ("G") ("H") ("I") ("J") ("K") ("L")
   ("M") ("N") ("O") ("P") ("Q") ("R") ("S") ("T") ("U") ("V") ("W") ("X") ("Y") ("Z") 
   ("a") ("b") ("c") ("d") ("e") ("f") ("g") ("h") ("i")
@@ -230,6 +230,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
   ) ; consonant_with_viraama ends
 
  (independent
+  ("--" "–")
+  ("---" "—")
   ("a" "ಅ")
   ("aa" "ಆ")
   ("A" "ಆ")

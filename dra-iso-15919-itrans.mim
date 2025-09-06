@@ -266,6 +266,8 @@ Also, see: http://en.wikipedia.org/wiki/Devanagari_transliteration.")
 ("~H" "H")  ; And not visarga.
 ("~AUM" "Ōṁ")
 ("~OM" "Ōṁ")
+("--" "–")
+("---" "—")
 ))
 
 (state

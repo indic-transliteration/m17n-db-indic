@@ -44,7 +44,7 @@ For motivations and further details, see description of hi-itrans.mim.")
 
 (map
  (starter
-  (".") (";") ("!") ("~") ("#") ("$") ("*") ("]") ((C-#)) ((C-@))
+  (".") ("-") (";") ("!") ("~") ("#") ("$") ("*") ("]") ((C-#)) ((C-@))
   ("0") ("1") ("2") ("3") ("4") ("5") ("6") ("7") ("8") ("9")
   ("A") ("C") ("D") ("E") ("G") ("H") ("I") ("J") ("K") ("L")
   ("M") ("N") ("O") ("R") ("S") ("T") ("U") ("Y")
@@ -125,6 +125,7 @@ For motivations and further details, see description of hi-itrans.mim.")
   ("yh" "य़्")           ; not in ITRANS Devanagari table
   (".y" "य़्")
   ("r" "र्")
+  ("NR" "णृ")
   ("NRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("nRH" "ऩ्ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
   ("RH" "ऱ्")				; not in ITRANS table; useful for tamil & maNipravALa
@@ -239,6 +240,8 @@ For motivations and further details, see description of hi-itrans.mim.")
   (".L^I" "ॣ")
   ("AUM" "ॐ")
   ("OM" "ॐ")
+  ("--" "–")
+  ("---" "—")
   ((C-#) "‌")		      ; not in ITRANS Devanagari table
   ((C-@) "‍"))			      ; not in ITRANS Devanagari table
 
@@ -322,6 +325,7 @@ For motivations and further details, see description of hi-itrans.mim.")
   (".," "॥")			      ; not in ITRANS Devanagari table
   (". " "।" (pushback 1))
   ("..." "॰")
+  ("...." "…")
   ((?. Return) "।" (pushback 1))
   ((?. Tab) "।" (pushback 1))
   (".(" "।" (pushback 1))
