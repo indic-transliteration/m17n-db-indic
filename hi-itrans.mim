@@ -156,7 +156,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("jn" "ज्ञ्")
   ("j~n" "ज्ञ्")
   ("GY" "ज्ञ्")
-  ("dny" "ज्ञ्")		      ; not in ITRANS Devanagari table
+  ; ("dny" "ज्ञ्")		      ; not in ITRANS Devanagari table. messes with dn.
   ("x" "क्ष्")
   ("ks" "क्स्")
   ("ksh" "क्ष्")
