@@ -122,7 +122,8 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("d" "द्")
   ("dh" "ध्")
   ("n" "न्")
-  (";n" "ऩ्")			      ; not in ITRANS Devanagari table
+  (";n" "ऩ्")			      ; not in ITRANS Devanagari table; useful for tamil & maNipravALa
+  ("nH" "ऩ्")			      ; not in ITRANS Devanagari table; useful for tamil & maNipravALa
   ("p" "प्")
   ("ph" "फ्")
   ("P" "फ्")
@@ -137,8 +138,16 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("yh" "य़्")           ; not in ITRANS Devanagari table
   (".y" "य़्")
   ("r" "र्")
-  ("RH" "ऱ्")				; not in ITRANS table
-  ("rH" "ऱ्")				; not in ITRANS table
+  ("NR" "णृ")
+
+; not in ITRANS table; useful for tamil & maNipravALa
+  ("NRH" "ऩ्ऱ्")	
+  ("nRH" "ऩ्ऱ्")				
+  (";r" "ऱ्")				
+  ("RH" "ऱ्")				
+  ("RRH" "ऱ्ऱ्")				
+  ("rH" "ऱ्")				
+
   ("l" "ल्")
   ("L" "ळ्")
   ("LH" "ऴ्")
@@ -167,8 +176,6 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("bH"  "ॿ्"))
 
  (independent
-  ("--" "–")
-  ("---" "—")
   ("a" "अ")
   ("aa" "आ")
   ("A" "आ")
@@ -200,6 +207,8 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   ("R^I" "ॠ")			      ; not in ITRANS Devanagari table
   ("LLI" "ॡ")			      ; not in ITRANS Devanagari table
   ("L^I" "ॡ")			      ; not in ITRANS Devanagari table
+  ("nR" "नृ")			      ; To compensate for nRH shortcut
+  ("nRR" "नॄ")
   (".N" "ँ")
   (".n" "ं")
   ("M" "ं")
@@ -245,6 +254,8 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   (".L^I" "ॣ")
   ("AUM" "ॐ")
   ("OM" "ॐ")
+  ("--" "–")
+  ("---" "—")
   ((C-#) "‌")		      ; not in ITRANS Devanagari table
   ((C-@) "‍"))			      ; not in ITRANS Devanagari table
 
@@ -314,6 +325,7 @@ typing \"har..\" produces \"हर।\", not \"हर्।\".")
   (".," "॥")			      ; not in ITRANS Devanagari table
   (". " "।" (pushback 1))
   ("..." "॰")
+  ("...." "…")
   ((?. Return) "।" (pushback 1))
   ((?. Tab) "।" (pushback 1))
   (".(" "।" (pushback 1))
